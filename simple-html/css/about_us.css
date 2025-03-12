@@ -1,6 +1,15 @@
+:root{
+    --color-base: #333;
+    --color-base-figure-background: ghostwhite;
+    --color-base-figure-border: #ccc;
+    --font-family-base: "Roboto", sans-serif;
+    --font-family-title: "Abril Fatface", serif;
+    --font-family-subtitle: "Goblin One", serif;
+}
+
 body{
-    color: #333333;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--color-base);
+    font-family: var(--font-family-base);
     margin-left: auto;
     margin-right: auto;
     width: 940px;
@@ -9,16 +18,18 @@ body{
 h1{
     background-image: url(../img/sobre-background.jpg);
     padding: 10px;
+    font-family: var(--font-family-title);
 }
 
 h2{
-    border-bottom: 2px groove #333333;
+    border-bottom: 2px groove var(--color-base);
     margin-top: 30px;
+    font-family: var(--font-family-subtitle);
 }
 
 figure{
-    background-color: #f2eded;
-    border: 1px solid #ccc;
+    background-color: var(--color-base-figure-background);
+    border: 1px solid  var(--color-base-figure-border);
     text-align: center;
     padding: 15px;
     margin: 30px;
@@ -27,6 +38,8 @@ figure{
 figcaption{
     font-style: italic;
     margin-top: 10px;
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 50px;
 }
 
 p{
