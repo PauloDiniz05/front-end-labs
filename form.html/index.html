@@ -4,30 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=sell" />
 </head>
 <body>
-    <header>
-        <h1>Faça seu cadastro</h1>
-        <h2>Compras online 🛒</h2>
-        <img src="images/icone_cadastro.jpg" alt="icone cadastro">
+    <header class="grid-header-container">
+        <div>
+            <h1>Faça seu cadastro</h1>
+            <h2>Compras online <i class="material-symbols-outlined"> sell </i>
+            </h2>
+        </div>
+        <div>
+            <img src="images/icone_cadastro.jpg" alt="icone cadastro">
+        </div>
     </header>
     <form action="">
-    <fieldset>
+    <fieldset class="flex-container">
         <legend>Dados pessoais</legend>
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="Nome" placeholder="Seu nome">
+        <input type="text" id="nome" name="Nome" placeholder="Seu nome" required>
 
         <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="Seu E-mail">
+        <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
 
         <label for="data-nascimento">Data de nascimento</label>
-        <input type="date" id="data-nascimento" name="data-nascimento" placeholder="Sua data de nascimento">
+        <input type="date" id="data-nascimento" name="data-nascimento" placeholder="Sua data de nascimento" required>
 
         <label for="cpf">CPF</label>
-        <input  type="text" id="cpf" name="cpf" placeholder="000.000.00-00">
+        <input  type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" id="cpf" name="cpf" placeholder="000.000.00-00" required>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="flex-container">
         <legend>Endereço</legend>
 
         <label for="rua">Rua</label>
@@ -40,13 +46,14 @@
         <input type="text" id="bairro" name="Bairro" placeholder="Seu bairro">
 
         <label for="cep">CEP</label>
-        <input type="text" id="cep" name="CEP" placeholder="Seu CEP">
+        <input type="text" pattern="\d{5}-\d{3}" id="cep" name="CEP" placeholder="00000-000" required>
 
         <label for="cidade">Cidade</label>
         <input type="text" id="cidade" name="Cidade" placeholder="Sua cidade">
 
         <label for="estado">Estado</label>
         <select id="estado" name="estado">
+            <option value="" selected>Selecione um estado</option>
             <option value="ac">Acre</option>
             <option value="al">Alagoas</option> 
             <option value="am">Amazonas</option> 
@@ -77,21 +84,25 @@
         </select>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="flex-container">
         <legend>Login</legend>
 
         <label for="imagem-perfil">Imagem de perfil</label>
-        <input type="file" id="imagem-perfil" name="imagem-perfil">
+        <input type="file" id="imagem-perfil" name="imagem-perfil" accept="image/*" title="Apenas arquivos de imagem">
 
         <label for="login">Login</label>
-        <input type="text" id="login" name="login" placeholder="Seu login">
+        <input type="text" id="login" name="login" placeholder="Seu login" required>
 
         <label for="senha">Senha</label>
-        <input type="password" id="senha" name="senha" placeholder="Sua senha">
+        <input type="password" id="senha" name="senha" placeholder="Sua senha" minlength="8" required>
 
         <label for="confirmar-senha">Confirmar senha</label>
-        <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha">
+        <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" minlength="8" required>
     </fieldset>
+    <div falta um class>
+        <input type="submit">
+        <input type="reset">
+    </div>
     </form>
 </body>
 </html>
