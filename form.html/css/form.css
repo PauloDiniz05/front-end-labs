@@ -65,7 +65,7 @@ fieldset input, select{
 
 .grid-header-container {
     display: grid;
-    grid-template-areas: 'top-left top right';
+    grid-template-areas: 'top-left top-right';
     border-bottom: black 5px solid;
     margin-bottom: 5px;
 }
