@@ -46,12 +46,12 @@ body {
     overflow: hidden;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
- 
+
 .card:hover {
     transform: scale(1.10);
-    box-shadow: 0 4px 20px black;
+    box-shadow: 0 4px 20px rgb(78, 138, 216);
 }
- 
+
 .card h2 {
     margin: 0;
     text-shadow: 1px 1px 2px gray;
@@ -60,7 +60,7 @@ body {
 .card var {
     color: var(--color-primary);
     font-weight: 400;
-    font-size: 50px;
+    font-size: 40px;
     font-style: normal;
     margin-bottom: 10px;
     transition: font-size 0.3 ease;
@@ -95,4 +95,29 @@ ul li {
  
 ul > li:first-child{
     font-weight: 500;
+}
+
+.card button {
+    display: grid;
+    place-items: center;
+    min-width: 200px;
+    padding: 10px 0;
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    background: 0.3s, color 0.3s ease;
+    cursor: pointer;
+}
+
+.alert {
+    border: 2px solid var(--color-alert);
+}
+
+
+.card:hover button {
+    color: var(--color-light);
+    background: var(--color-primary);
 }
