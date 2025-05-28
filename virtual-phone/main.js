@@ -7,16 +7,18 @@ const teclas =
 const limpar = 
         document.querySelector(".icon");
 
+const limiteNumeros = 14;
+
 limpar.onclick = () => {
         const opcao = confirm("Deseja mesmo continuar?")
         if(opcao)
         display.value = "";
     }
 
-//criar condição para travar mais de 14 digitos
-
 function valorTeclaToDisplay (i) {
+    if (display.value.length < limiteNumeros) {
     display.value += teclas[i].value;
+    }
 }
 
 for(let i = 0; i < teclas.length; i++)
